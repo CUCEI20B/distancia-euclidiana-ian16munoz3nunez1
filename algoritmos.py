@@ -1,16 +1,14 @@
-def distancia_euclidiana(x_1, y_1, x_2, y_2):
-    """ Calcula la distancia euclidiana
+import math
 
-    Devuelve el resultado de la formula
+def distancia_euclidiana(x_1=0.0, y_1=0.0, x_2=0.0, y_2=0.0):
+  distancia = math.sqrt(((x_2-x_1)**2)+((y_2-y_1)**2))
+  return distancia
 
-    También se le conoe a la fórmula como:
-    distancia entre dos puntos
+x_1 = float(input("Ingresa x1: "))
+y_1 = float(input("Ingresa y1: "))
+x_2 = float(input("Ingresa x2: "))
+y_2 = float(input("Ingresa y2: "))
 
-    Parámetros:
-    x_1 -- origen_x
-    y_1 -- origen_y
-    x_2 -- destino_x
-    y_2 -- destino_y
+d = distancia_euclidiana(x_1, y_1, x_2, y_2)
 
-    """
-    
+print("La distancia es", d)
